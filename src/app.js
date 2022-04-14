@@ -517,7 +517,7 @@ function App(){
                 return (
                     <>
                         <li key={item.id}>
-                            <input type="checkbox" name="status" onClick={ checked.bind(this, item) } />
+                            <input type="checkbox" name="status" onChange={ checked.bind(this, item)} checked={(item.status === 'done')} />
                             <span style={(item.status == 'done' ? { textDecoration: 'line-through' } : { textDecoration: 'none' })}>{item.title}</span>
                             &nbsp;&nbsp;&nbsp;
                             <button onClick={editTodoHandler.bind(this, item)}>Edit</button>
